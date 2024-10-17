@@ -1,4 +1,4 @@
-public class Larga extends Arma implements Comparable<Larga>{
+public class Larga extends Arma implements Comparable{
     private String justifUso;
     private int nivelArma;
     private boolean tieneSello;
@@ -19,9 +19,12 @@ public class Larga extends Arma implements Comparable<Larga>{
         return this.calibre >= 9 && "EN USO".equals(this.estado) && this.tieneSello;
     }
 
-    @Override
-    public int compareTo(Larga aux){
-      return Integer.compare(this.nivelArma, aux.getNivelArma());
+    public int compareTo(Object o) {
+        if (o instanceof Larga) {
+            Larga otraArma = (Larga) o;
+            return Integer.compare(this.nivelArma, otraArma.nivelArma);
+        }
+        return 0; // Si el objeto no es de tipo Larga, no puede compararse
     }
 
 
