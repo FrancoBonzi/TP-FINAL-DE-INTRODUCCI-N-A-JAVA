@@ -31,6 +31,17 @@ public class Main {
         System.out.println("¿El arma corta 1 se puede disparar a más de 200 metros?"+armasCorta1.efectividadMas200m());
         System.out.println("¿El arma corta 2 se puede disparar a más de 200 metros?"+armasCorta2.efectividadMas200m());
 
+        System.out.println("------------------------------------");
 
+        ///Mostrar informacion de los policias y sus respectivas armas
+        System.out.println("Información del policia 1 y sus armas");
+        System.out.println("Polciia 1: "+poli1);
+        System.out.println("El arma corta del policia 1: "+armasCorta1.getMarca());
+        System.out.println("El arma larga del policia 1: "+armasLargas1.getMarca());
+
+        System.out.println("-------------------------------------");
+        System.out.println("Policia 2: "+poli2);
+        System.out.println("El arma corta del policia 2: "+armasCorta2.getMarca());
+        System.out.println("El arma larga del policia 2: "+armasLargas2.getMarca());
     }
 }
